@@ -277,7 +277,9 @@ footer ul{
     text-align: right;
     margin-right: 19%;
 }
-
+.slide-button{
+    display: none;
+}
 
 @media (max-width:1440px){
     header{
@@ -466,6 +468,27 @@ footer ul{
         left: -40px;
         height: 40px;
     }
+
+    .section-2 .section-2-title{
+        margin-bottom:300px;
+    }
+    /* SECTION 3 */
+
+    .section-3-content{
+        position: relative;
+    }
+
+    .section-3-item{
+        display: none;
+        position: absolute;
+        top:-200px;
+    }
+
+    .section-3-item.select{
+        display: flex;
+        flex-direction: column;
+    }
+
     /* SECTION 4 */
     .section-4-content{
         flex-direction: column;
@@ -508,5 +531,23 @@ footer ul{
         padding: 20px 35px;
     }
 
+    .slide-button{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        position: absolute;
+        left: 47%;
+        transform: translateX(-6px);
+        top: 30px;
+    }
+    .slide-button button{
+        cursor: pointer;
+        border: 2px solid red;
+        padding: 5px;
+        border-radius: 50px;
+    }
+    .red{
+        background-color: red;
+    }
 
 }

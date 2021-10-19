@@ -45,3 +45,7 @@ function iniciarSlide(){
 
 window.addEventListener('load', iniciarSlide)
 
+
+function nextSlide(){
+   i = 2
+}

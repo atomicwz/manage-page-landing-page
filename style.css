@@ -361,27 +361,34 @@ footer ul{
 @media (max-width:850px){
 
     /* HEADER STYLE  */
- .section-1-content{
-     flex-direction: column-reverse;
-     max-width: 100%;
-     justify-content: center;
- }
- .section-1-item{
-     max-width: 90%;
-     margin: 0 auto;
- }
- .section-1-item h1, p{
-     max-width: 90%;
-     text-align: center;
-     margin: 20px auto;
- }
- .section-1-content img{
-    width: 80%;
- }
+    .header-content img{
+        margin-left: 5%;
+    }
+    .btn-hamburguer{
+        background-color: red;
+        position: relative;
+    }
+    .section-1-content{
+        flex-direction: column-reverse;
+        max-width: 100%;
+        justify-content: center;
+    }
+    .section-1-item{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .section-1-item h1, p{
+        max-width: 90%;
+        text-align: center;
+        margin: 20px auto;
+    }
+    .section-1-content img{
+        width: 80%;
+    }
 
- .section-1-content h1{
-     text-align: center;
- }
+    .section-1-content h1{
+        text-align: center;
+    }
 
     /* MENU HAMBURGER */
     .header-content .btn-link{
@@ -414,7 +421,7 @@ footer ul{
         display: flex;
         width: 40px;
         height:5px;
-        margin-right: 3%;
+        margin-right: 2%;
         border: none;
         background: var(--dark-blue);
     }
@@ -437,10 +444,11 @@ footer ul{
         gap: 30px;
         top: 50px;
         width: 80%;
-        height: 80vh;
+        height: 35vh;
         left: 10%;
         font-size: 1.4rem;
-    }
+        border: 1px solid rgb(212, 212, 212);
+        }
 
     /* SECTION 2 */
     .section-2{
@@ -476,6 +484,9 @@ footer ul{
 
     .section-3-content{
         position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
     }
 
     .section-3-item{
@@ -489,14 +500,33 @@ footer ul{
         flex-direction: column;
     }
 
+
+    .slide-button{
+        display: block;
+        margin:50px auto;
+        transform: translateX(0px);
+    }
+    .slide-button button{
+        cursor: pointer;
+        border: 2px solid red;
+        padding: 5px;
+        border-radius: 50px;
+    }
+    .red{
+        background-color: red;
+    }
+
     /* SECTION 4 */
     .section-4-content{
+        justify-content: center;
         flex-direction: column;
     }
     .section-4-content h2{
-        font-size: 2.3rem;
-
+        font-size: 2rem;
+        text-align: center;
     }
+
+    
 
 /* FOOTER RESPONSIVO  */
     .footer-content{
@@ -531,23 +561,88 @@ footer ul{
         padding: 20px 35px;
     }
 
-    .slide-button{
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        position: absolute;
-        left: 47%;
-        transform: translateX(-6px);
-        top: 30px;
+
+
+}
+
+@media (max-width:500px){
+
+
+    .hamburguer{
+
     }
-    .slide-button button{
-        cursor: pointer;
-        border: 2px solid red;
-        padding: 5px;
-        border-radius: 50px;
-    }
-    .red{
-        background-color: red;
+    .header-content img{
+        margin: 0 2%;
     }
 
+    .section-1-content{
+        max-width: 90%;
+    }
+    .section-1-content img{
+        width: 70%;
+        height: 35vh;
+    }
+    .section-1-content h1{
+        font-size: 2.2rem;
+    }
+    .section-1-content p{
+        font-size: 1rem;
+        max-width: 80%;
+    }
+
+
+    /* SECTION 2 */
+    .item-1 h3::before, .item-2 h3::before, .item-3 h3::before{
+        left: -10%;
+        padding: 0 10px 5px 10px;
+        border-radius: 50px;
+        width: 40px;
+    }
+
+
+    .section-2-content h2{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .section-2-content p{
+        text-align: center;
+        font-size: 1rem;
+        max-width: 80%;
+    }
+
+    .section-2-item h3{
+        font-size: 1.5rem;
+        max-width: 90%;
+        padding-left: 40px;
+    }
+    .section-2 h2{
+        margin: 50px 0;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    /* SECTION 3 */
+
+    .section-3-item{
+        max-width: 90%;
+        right: 5%;
+    }
+    .slide-button{
+        margin:80px auto;
+    }
+
+    /* FOOTER */
+
+    .footer-item-2 input{
+        padding: 15px;
+        max-width: 100px;
+    }
+    .footer-item-2 .btn{
+        padding: 15px;
+    }
+
+    .redes img{
+        width: 35px;
+    }
+    
 }

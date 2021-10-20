@@ -20,6 +20,8 @@ const slideBtn = document.querySelectorAll('.slide-button button')
 let i = 0
 let tempo = 3000
 
+
+
 function carrousel(){
 
    slideBtn[i].classList.remove('red')
@@ -37,6 +39,18 @@ function carrousel(){
 
 }
 
+const teste2 = box.classList
+
+function slide(numero){
+   
+
+   box[numero].classList.add("select")
+   slideBtn[numero].classList.add('red')
+
+   
+
+ }
+
 
 
 function iniciarSlide(){ 
@@ -45,7 +59,6 @@ function iniciarSlide(){
 
 window.addEventListener('load', iniciarSlide)
 
+const btnSlide = document.querySelectorAll('.slide-button button')
 
-function nextSlide(){
-   i = 2
-}
+

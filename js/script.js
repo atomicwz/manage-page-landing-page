@@ -2,9 +2,9 @@
 
 const btn = document.getElementById('hamburguer')
 
-function menuHamburg(){
+function menuHamburg() {
 
-const nav = document.getElementById('menu')
+   const nav = document.getElementById('menu')
    nav.classList.toggle('active')
 
 }
@@ -12,53 +12,44 @@ const nav = document.getElementById('menu')
 btn.addEventListener('click', menuHamburg)
 
 
-// Slide responsivo
+//111111111
 
 const box = document.querySelectorAll('#slide article')
 const slideBtn = document.querySelectorAll('.slide-button button')
+let i = 1
 
-let i = 0
-let tempo = 3000
+const passarSlide = () => {
 
 
+   box.forEach((item) => {
+      const estaAtivo = item.classList.contains('select')
+      if (estaAtivo) item.classList.remove('select')
+   })
+   slideBtn.forEach((botao) => {
+      const estaAtivo = botao.classList.contains('red')
+      if (estaAtivo) botao.classList.remove('red')
+   })
 
-function carrousel(){
-
-   slideBtn[i].classList.remove('red')
-   box[i].classList.remove("select")
-
+   box[i].classList.add('select')
+   slideBtn[i].classList.add('red')
    i++
 
-   if( i >= box.length){
+   if (i == box.length) {
       i = 0
    }
 
-   box[i].classList.add("select")
-
-   slideBtn[i].classList.add('red')
-
 }
 
-const teste2 = box.classList
-
-function slide(numero){
-   
-
-   box[numero].classList.add("select")
-   slideBtn[numero].classList.add('red')
-
-   
-
- }
+box.forEach(item => item.addEventListener('click', passarSlide)
+)
+slideBtn.forEach(item => item.addEventListener('click', passarSlide)
+)
 
 
 
-function iniciarSlide(){ 
-   setInterval(carrousel, tempo)
-}
 
-window.addEventListener('load', iniciarSlide)
 
-const btnSlide = document.querySelectorAll('.slide-button button')
+
+
 
 
